@@ -1,0 +1,14 @@
+{
+    "private": true,
+    "scripts": {
+      "build-all": "node start/tool/build"
+    },
+    "workspaces": [
+      "auth",
+      "common",
+      "start",
+      "website",
+      "dictionary",
+      "packages/*"
+    ]
+  }

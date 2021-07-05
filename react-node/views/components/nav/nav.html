@@ -1,0 +1,17 @@
+{% macro render_nav(data) %}
+<div class="zr-header" style="background-color:{{data.bgColor | default('#FF4E4A')}};position:{{data.position}}">
+    <div class="header-left" style="flex:{%if data.title%}0.6{%else%}1{%endif%}">
+        {% if data.left %}
+            {{ data.left | safe }}
+        {% else %}
+            <a href="javascript:history.back();" id="gobackButton"><img width="12" height="22" src="/bzr/static/images/icon/goback.png"></a>
+        {% endif %}
+    </div>
+    {% if data.title %}
+        <div class="header-center">{{data.title}}</div>
+    {% endif %}
+    <div class="header-right" style="flex:{%if data.title%}0.6{%else%}1{%endif%}">
+        <a href="{{data.right}}/account" class="logout"><img width="18" height="19" src="/bzr/static/images/icon/account_icon.png"></a>
+    </div>
+</div>
+{% endmacro %}

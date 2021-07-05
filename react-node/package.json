@@ -1,0 +1,53 @@
+{
+  "name": "yifeng-fund",
+  "version": "1.0.0",
+  "main": "lib/app.js",
+  "scripts": {
+    "start": "babel-node lib/app.js",
+    "webpack": "webpack-dev-server -d --progress --colors --no-info",
+    "dev:webpack": "webpack-dev-server --config webpack.config.js",
+    "build": "webpack -w ",
+    "dev-babel": "babel-node lib/app.js",
+    "dev": "NODE_ENV=dev concurrently --kill-others --kill-others-on-fail  'npm run dev:webpack' 'npm run dev-babel' ",
+    "prod": "NODE_ENV=production concurrently --kill-others --kill-others-on-fail  'npm run dev:webpack' 'npm run dev-babel' ",
+    "compass": "compass compile --force",
+    "compass:watch": "compass watch",
+    "cp:files": "node tools/copy-files.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "concurrently": "^3.5.1",
+    "crypto": "^1.0.1",
+    "cryptojs": "^2.5.3",
+    "css-loader": "^0.28.11",
+    "forever": "^0.15.3",
+    "glob": "^7.1.2",
+    "html-webpack-plugin": "^3.2.0",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-mount": "^3.0.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.3",
+    "koa-views": "^6.1.4",
+    "mime": "^2.3.1",
+    "moment": "^2.22.2",
+    "mz": "^2.7.0",
+    "nunjucks": "^3.1.3",
+    "qs": "^6.5.2",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.10.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-syntax-function-bind": "^6.13.0",
+    "compass": "^0.1.1",
+    "webpack-cli": "^3.0.3",
+    "webpack-dev-server": "^3.1.4"
+  }
+}

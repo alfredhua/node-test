@@ -1,0 +1,20 @@
+.page-scroll-to-top{
+	display: none;
+	position: fixed;
+	right: 20px;
+	bottom: 120px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	.scroll_to_top_active{
+		display: none;
+	}
+	&:hover{
+		.scroll_to_top{
+			display: none;
+		}
+		.scroll_to_top_active{
+			display: inline-block;
+		}
+	}
+}

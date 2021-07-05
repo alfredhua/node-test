@@ -1,0 +1,10 @@
+{
+  "presets": ["env", "react", "stage-0", "stage-3"],
+  "plugins": ["syntax-async-functions",
+    ["import", { "libraryName": "antd", "libraryDirectory": "lib","style": true, "css":true}, "ant"],
+    ["import", { "libraryName": "ant-mobile", "libraryDirectory": "lib","style": true, "css":true}, "ant-mobile"]
+  ]
+}
+
+
+

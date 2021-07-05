@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import "components/nav/nav.html" as nav %}
+
+{% block css %}
+    {% css "bind-card-success" %}
+{% endblock %}
+
+{% block nav %}
+    {{ nav.render_nav({
+        left:'',
+        title:'test',
+        right: url}) 
+    }}
+{% endblock %}
+
+{% block main %}
+    <div class="bindcards-success">
+        <div class="right-img">
+            <p>aaaaaa</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}

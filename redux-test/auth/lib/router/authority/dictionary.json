@@ -1,0 +1,21 @@
+{
+  "title":"字典管理",
+  "children":[
+		{
+			"key":"article-type",
+			"title":"角色管理",
+			"children":[
+				{
+					"key":"list",
+					"title":"查看"
+				},{
+					"key":"create",
+					"title":"创建"
+				},{
+					"key":"edit",
+					"title":"修改"
+				}
+			]
+		}
+	]
+}

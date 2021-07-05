@@ -1,0 +1,54 @@
+.risk-test {
+    margin-top: -44px;
+    background-color: #f0f3f4;
+    padding-bottom: 50px;
+    .risk-test-list {
+        margin-top: 44px;
+        .test-item {
+            padding: 0 10px;
+            margin-top: 10px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            background-color: #fff;
+            &:last-child {
+                margin-bottom: 20px;
+            }
+            .test-title {
+                padding: 10px 0;
+                font-size: 16px;
+                line-height: 23px;
+                color: #262626;
+                border-bottom: 1px solid #ddd;
+                span {
+                    line-height: 22px;
+                }
+            }
+            .test-content-item {
+                position: relative;
+                padding: 8px 0;
+                line-height: 20px;
+                font-size: 14px;
+                color: #585858;
+                overflow: hidden;
+                .test-radio {
+                    display: inline-block;
+                    position: absolute;
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 7px;
+                    border: 1px solid #ddd;
+                    border-radius: 50%;
+                    &.selected {
+                        background: url(/bzr/static/images/icon/fund-icon-choice@2x.png) no-repeat 0 0;
+                        background-size: 18px 18px;
+                        border-color: transparent;
+                    }
+                }
+                .test-content-text {
+                    padding-left: 27px;
+                    float: left;
+                }
+            }
+        }
+    }
+}

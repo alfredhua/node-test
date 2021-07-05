@@ -1,0 +1,31 @@
+<html>
+     <head>
+          <title>{% block title %}标题{% endblock %}</title>
+            <meta charset="utf-8">
+            <meta name="keywords" content="{% block keywords%}介绍01{% endblock %}" />
+            <meta name="description" content="{% block description%}介绍01{% endblock %}"/>
+            <meta name="renderer" content="webkit">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="format-detection" content="telephone=no,address=no,email=no">
+            <meta name="viewport" content="width=1024">
+            <meta name="handheldFriendly" content="true">
+            <meta name="apple-mobile-web-app-capable" content="yes">
+           {% css "base/base"%}
+           {% block css %}{% endblock %}
+      </head>
+      
+      <body>
+        {% block head%}
+              {% include "components/header/header.html" %}
+         {% endblock %} 
+
+         {% block content %}{% endblock %}
+              {% include "components/scrollToTop/scrollToTop.html" %}
+         {% block foot %}
+              {% include "components/footer/footer.html" %}
+         {% endblock %}
+
+         {% js "/library/jquery/jquery.min"%}
+         {% block js %}{% endblock %}
+     </body>
+ </html>

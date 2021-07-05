@@ -1,0 +1,55 @@
+@charset "utf-8";
+@import "compass/css3";
+@import "compass/support";
+
+.header-nav{
+	position: relative;
+	height: 100px;
+	background-color:#fff;
+	.header-wraper{
+		@include display-flex;
+		@include align-items(center);
+		@include justify-content(space-between);
+		margin: auto;
+		max-width: 1200px;
+		height: 100%;
+		.logo{
+			@include border-radius(5px);
+			width:182px;
+			height: 48px;
+		}
+		.nav-menus{
+			@include display-flex;
+			height: 100%;
+			.menu{
+				@include display-flex;
+				@include align-items(center);
+				@include justify-content(center);
+				position: relative;
+				height: 100%;
+				width: 112px;
+				font-size: 16px;
+				font-weight: bold;
+				cursor: pointer;
+				color:#666666;
+				text-align: center;
+				&:hover{
+					color:#c8161d;
+				}
+				&.active{
+					color:#c8161d;
+					&::after{
+						position: absolute;
+						content: " ";
+						left: 0;
+						right: 0;
+						bottom: 0;
+						height: 4px;
+						background-color: #c8161d;
+					}
+				}
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+{
+  "title":"字典管理",
+  "children":[
+		{
+			"key":"notice-type",
+			"title":"公告字典",
+			"children":[
+				{
+					"key":"list",
+					"title":"查看"
+				},{
+					"key":"create",
+					"title":"创建"
+				},{
+					"key":"edit",
+					"title":"修改"
+				},{
+					"key":"active",
+					"title":"激活"
+				},{
+					"key":"close",
+					"title":"关闭"
+				},{
+					"key":"watch-article",
+					"title":"查看文章"
+				},{
+					"key":"del",
+					"title":"删除文章"
+				}
+			]
+		}
+	]
+}

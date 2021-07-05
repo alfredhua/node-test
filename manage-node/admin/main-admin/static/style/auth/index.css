@@ -1,0 +1,102 @@
+html,body, #app{
+  margin: 0;
+  height:100%;
+  overflow: hidden;
+}
+
+.contain {
+  background:url(../../images/auth/background.jpg);
+  height:100%;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position:right bottom;
+  background-size:cover;
+  text-align: center;
+}
+
+.title{
+  position:absolute;
+  width: 100%;
+  font-size: 50px;
+  margin-top: 100px;
+  color: aliceblue;
+}
+
+.login{
+  position:absolute;
+  width: 100%;
+  margin-top: 200px;
+}
+.user_name{
+  background: url(../../images/auth/mail.png) no-repeat 13px 11px;
+}
+.password{
+  background: url(../../images/auth/password.png) no-repeat 13px 11px;
+}
+.pass_div{
+  margin-top: 10px;
+}
+.text{
+  width: 250px;
+  background-size:25px;
+  color:#FFF;
+  border-radius:5px;
+  padding: 15px 10px 15px 50px;
+  border:2px solid #FFF;
+  font-size:14px;
+}
+.verify_div{
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+
+}
+.verify{
+  background: url(../images/password.png) no-repeat 13px 11px;
+  width: 120px;
+  background-size:25px;
+  color:#FFF;
+  border-radius:5px;
+  padding: 15px 10px 15px 50px;
+  border:2px solid #FFF;
+  font-size:14px;
+  margin-right: 20px;
+}
+
+.verify_btn{
+  font-size:16px;
+  font-weight:700;
+  color:#FFF;
+  border-radius:5px;
+  padding: 12px 5px 12px 5px;
+  border: 1px solid #FFF;
+  width: 100px;
+  background-color: #173148;
+}
+.login_div{
+  margin-top: 20px;
+}
+
+.login_btn{
+  font-size:20px;
+  width: 300px;
+  color:#FFF;
+  border-radius:5px;
+  padding: 10px 5px 10px 5px;
+  background-color: #173148;
+  letter-spacing:10px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color:    #FFF;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #FFF;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #FFF;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    #FFF;
+}

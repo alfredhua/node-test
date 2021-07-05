@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name"       : "fund",
+      "script"     : "tools/start.js",
+      "exec_mode"  : "fork",
+      "exec_interpreter": "./node_modules/.bin/babel-node",
+      "env" : {
+        "NODE_ENV": "production"
+     },
+     "autorestart" : true
+    }
+  ]
+}

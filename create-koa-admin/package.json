@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "server": " cd main && yarn start "
+  },
+  "workspaces": [
+    "main",
+    "auth",
+    "common",
+    "blog",
+    "website",
+    "dictionary",
+    "packages/*"
+  ]
+}

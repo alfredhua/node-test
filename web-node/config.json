@@ -1,0 +1,10 @@
+{
+  "db":{
+    "host": "localhost",
+    "user": "manage",
+    "password": "manage",
+    "database": "manage_auth"
+  },
+  "server":"http://127.0.0.1:3122",
+  "redis":""
+}

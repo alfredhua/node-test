@@ -1,0 +1,105 @@
+{
+	"title": "网站管理",
+	"children": [{
+			"key": "notice",
+			"title": "公告管理",
+			"children": [{
+				"key": "list",
+				"title": "查看"
+			}, {
+				"key": "create",
+				"title": "创建"
+			}, {
+				"key": "edit",
+				"title": "修改"
+			}, {
+				"key": "publish",
+				"title": "发布"
+			}]
+		},
+		{
+			"key": "banner",
+			"title": "banner管理",
+			"children": [{
+				"key": "list",
+				"title": "查看"
+			}, {
+				"key": "create",
+				"title": "创建"
+			}, {
+				"key": "edit",
+				"title": "修改"
+			}, {
+				"key": "del",
+				"title": "删除"
+			}]
+		}, {
+			"key": "news",
+			"title": "新闻管理",
+			"children": [{
+				"key": "list",
+				"title": "查看"
+			}, {
+				"key": "create",
+				"title": "创建"
+			}, {
+				"key": "edit",
+				"title": "修改"
+			}, {
+				"key": "publish",
+				"title": "发布"
+			}, {
+				"key": "recall",
+				"title": "撤回"
+			}, {
+				"key": "del",
+				"title": "删除"
+			}]
+		}, {
+			"key": "produce",
+			"title": "产品管理",
+			"children": [{
+				"key": "list",
+				"title": "查看"
+			}, {
+				"key": "create",
+				"title": "创建"
+			}, {
+				"key": "edit",
+				"title": "修改"
+			}, {
+				"key": "del",
+				"title": "删除"
+			}, {
+				"key": "set-detail",
+				"title": "设置产品内容"
+			}]
+		}, {
+			"key": "setting",
+			"title": "网站设置",
+			"children": [{
+				"key": "open",
+				"title": "开启"
+			}, {
+				"key": "close",
+				"title": "关闭"
+			}]
+		}, {
+			"key": "partner",
+			"title": "合作伙伴",
+			"children": [{
+				"key": "list",
+				"title": "查看"
+			}, {
+				"key": "create",
+				"title": "创建"
+			}, {
+				"key": "edit",
+				"title": "修改"
+			}, {
+				"key": "del",
+				"title": "删除"
+			}]
+		}
+	]
+}
