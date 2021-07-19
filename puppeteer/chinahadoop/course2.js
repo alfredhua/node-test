@@ -15,10 +15,10 @@ var fs = require('fs');
     });
     const page = await browser.newPage();
     await page.setCookie(
-        {"name":"PHPSESSID","value":"","domain":"www.chinahadoop.cn"},
+      
     ); 
 
-    var arr=["2073"]
+    var arr=["1354", "1483", "1504", "1847", "1878", "1911", "1958", "2031", "2061", "2076", "1244", "1574", "1578", "1579", "1541", "1575", "1593", "566", "2035", "2036", "2037", "2038", "2039", "2042", "2040", "2041", "2057", "2056", "1776", "1777", "1778", "1779", "2084", "2073", "2069", "2068"];
 
     for(var j=0;j<arr.length;j++){
       await page.goto("https://www.chinahadoop.cn/course/"+arr[j]+"/manage/lesson ", { waitUntil: 'networkidle2' });
