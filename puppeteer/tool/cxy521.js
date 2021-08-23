@@ -2,6 +2,7 @@
 const puppeteer = require('puppeteer-core');
 const findChrome = require('carlo/lib/find_chrome.js');
 var fs = require('fs');
+var request = require('request');
 
 
 (async()=>{
@@ -19,10 +20,12 @@ var fs = require('fs');
     var list=await page.$$("#hot-tool li",node => node );
     for(var i=0;i<list.length;i++){
          const src = await list[i].$eval('img', el => el.src);
+         var fileName=src.substring(src.lastIndexOf("\/")+1,src.length);
+         request(src).pipe(fs.createWriteStream('./index/'+fileName))
          const href = await list[i].$eval('a', el => el.href);
          const title = await list[i].$eval('a', el => el.innerHTML);
          console.log(src,href,title);
-         fs.appendFile('./tool/index.txt',"tool|"+src+"|"+href+"|"+title.trim() +"\n", function (error) {})
+         fs.appendFile('./index/index.txt',"tool|"+src+"|"+href+"|"+title.trim() +"\n", function (error) {})
     }
 
     var arr=["top_tech","top_relax","top_study","top_devtool","top_work","top_media","top_resources","top_image","top_video","top_web"]
@@ -30,11 +33,13 @@ var fs = require('fs');
         var list2=await page.$$("#"+arr[j]+" li",node => node );
         for(var i=0;i<list2.length;i++){
             const src = await list2[i].$eval('img', el => el.src);
+            var fileName=src.substring(src.lastIndexOf("\/")+1,src.length);
+            request(src).pipe(fs.createWriteStream('./index/'+fileName))
             const href = await list2[i].$eval('a', el => el.href);
             const title = await list2[i].$eval('a', el => el.innerHTML);
             const description = await list2[i].$eval('p', el => el.innerHTML);
             console.log(src,href,title,description);
-             fs.appendFile('./tool/index.txt',arr[j]+"|"+src+"|"+href+"|"+title.trim()+"|"+description.trim() +"\n", function (error) {})
+             fs.appendFile('./index/index.txt',arr[j]+"|"+src+"|"+href+"|"+title.trim()+"|"+description.trim() +"\n", function (error) {})
         }
     }
     // fs.appendFile('./tool/index.txt',"-----------------------",function(error){})
@@ -46,11 +51,13 @@ var fs = require('fs');
         var list2=await page.$$("#"+teach[j]+" li",node => node );
         for(var i=0;i<list2.length;i++){
             const src = await list2[i].$eval('img', el => el.src);
+            var fileName=src.substring(src.lastIndexOf("\/")+1,src.length);
+            request(src).pipe(fs.createWriteStream('./manual/'+fileName))
             const href = await list2[i].$eval('a', el => el.href);
             const title = await list2[i].$eval('a', el => el.innerHTML);
             const description = await list2[i].$eval('p', el => el.innerHTML);
             console.log(src,href,title,description);
-            fs.appendFile('./tool/manual.txt',arr[j]+"|"+src+"|"+href+"|"+title.trim()+"|"+description.trim() +"\n", function (error) {})
+            fs.appendFile('./manual/manual.txt',arr[j]+"|"+src+"|"+href+"|"+title.trim()+"|"+description.trim() +"\n", function (error) {})
         }
     }
 
@@ -61,11 +68,13 @@ var fs = require('fs');
         var list2=await page.$$("#"+teach[j]+" li",node => node );
         for(var i=0;i<list2.length;i++){
             const src = await list2[i].$eval('img', el => el.src);
+            var fileName=src.substring(src.lastIndexOf("\/")+1,src.length);
+            request(src).pipe(fs.createWriteStream('./book/'+fileName))
             const href = await list2[i].$eval('a', el => el.href);
             const title = await list2[i].$eval('a', el => el.innerHTML);
             const description = await list2[i].$eval('p', el => el.innerHTML);
             console.log(src,href,title,description);
-            fs.appendFile('./tool/book.txt',teach[j]+"|"+src+"|"+href+"|"+title.trim()+"|"+description.trim() +"\n", function (error) {})
+            fs.appendFile('./book/book.txt',teach[j]+"|"+src+"|"+href+"|"+title.trim()+"|"+description.trim() +"\n", function (error) {})
         }
     }
 
