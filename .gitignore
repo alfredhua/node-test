@@ -3,4 +3,4 @@ build/
 node_modules/
 package-lock.json
 yarn.lock
-*/config.dev.json
+config.dev.json
