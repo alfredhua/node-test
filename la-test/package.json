@@ -1,0 +1,13 @@
+{
+  "name": "excel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "download": "^8.0.0",
+    "iconv-lite": "^0.6.3",
+    "request": "^2.88.2",
+    "xlsx": "^0.17.0"
+  }
+}
